@@ -107,3 +107,7 @@ The following images show the difference when no path compression is used and wh
 ![No Path Compression](../Images/NoPathCompression.png)
 
 ![Path Compression](../Images/PathCompression.png)
+
+## Code
+
+[Union Find Code](../Union%20Find/union-find.js)
