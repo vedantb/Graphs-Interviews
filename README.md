@@ -18,8 +18,7 @@
 
 3. [Most Stones Removed in Same Row or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) - [Code](./Union%20Find/most-stones-removed-same-row-column.js)
 
-4. [Number of Operations to make network connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/) -
-   CODE TODO
+4. [Number of Operations to make network connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/) - [Code](./Union%20Find/network-connected.js)
 
 5. [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) - CODE TODO
 
