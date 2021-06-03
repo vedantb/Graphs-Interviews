@@ -17,10 +17,15 @@
 **COMPLEXITIES**
 
 Construction = O(n)
+
 Union = α(n)
+
 Find = α(n)
+
 Get component size = α(n)
+
 Check if connected = α(n)
+
 Count components = O(1)
 
 α(n) = Amortized constant time
