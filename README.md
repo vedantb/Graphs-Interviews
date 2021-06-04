@@ -20,7 +20,7 @@
 
 4. [Number of Operations to make network connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/) - [Code](./Union%20Find/network-connected.js)
 
-5. [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) - CODE TODO
+5. [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) - [CODE](./Union%20Find/satisfiability-of-equality-equations.js)
 
 6. [Accounts Merge](https://leetcode.com/problems/accounts-merge/) -
    CODE TODO
