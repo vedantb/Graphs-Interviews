@@ -23,3 +23,5 @@
 5. [Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) - [CODE](./Union%20Find/satisfiability-of-equality-equations.js)
 
 6. [Accounts Merge](https://leetcode.com/problems/accounts-merge/) - [CODE](./Union%20Find/accounts-merge.js)
+
+7. [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) - [CODE](./Union%20Find/cities-minimum-cost.js)
