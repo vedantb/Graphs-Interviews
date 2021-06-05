@@ -30,6 +30,8 @@
 
 [Notes and Explanation](./Notes/topologocal-sort.md)
 
+[Topological Sort - Kahn's Algorithm](./Topological%20Sort\topsort.js)
+
 **Problems:**
 
 1. [Course Schedule 2](https://leetcode.com/problems/course-schedule-ii/) - [Code](./Topological%20Sort/course-schedule-2.js)
