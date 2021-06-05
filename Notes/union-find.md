@@ -14,7 +14,7 @@
 - Least common ancestor in trees
 - Image Processing
 
-**COMPLEXITIES**
+**COMPLEXITIES:**
 
 Construction = O(n)
 

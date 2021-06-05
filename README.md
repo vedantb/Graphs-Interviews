@@ -32,6 +32,8 @@
 
 [Topological Sort - Kahn's Algorithm](./Topological%20Sort\topsort.js)
 
+[Topological Sort - DFS](./Topological%20Sort\topsort-dfs.js)
+
 **Problems:**
 
 1. [Course Schedule 2](https://leetcode.com/problems/course-schedule-ii/) - [Code](./Topological%20Sort/course-schedule-2.js)
