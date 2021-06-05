@@ -71,6 +71,10 @@ function dagShortestPath(graph, start, numNodes) {
   return dist;
 }
 
+module.exports = {
+  topsort: topologicalSort
+};
+
 // Creating a graph
 const N = 7;
 let graph = {};
