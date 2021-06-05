@@ -1,6 +1,6 @@
 # Graphs For Interviews
 
-1. Union Find
+## Union Find
 
 **Notes:**
 
@@ -25,3 +25,11 @@
 6. [Accounts Merge](https://leetcode.com/problems/accounts-merge/) - [CODE](./Union%20Find/accounts-merge.js)
 
 7. [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) - [CODE](./Union%20Find/cities-minimum-cost.js)
+
+## Topologocal Sort
+
+[Notes and Explanation](./Notes/topologocal-sort.md)
+
+**Problems:**
+
+1. [Course Schedule 2](https://leetcode.com/problems/course-schedule-ii/) - [Code](./Topological%20Sort/course-schedule-2.js)
