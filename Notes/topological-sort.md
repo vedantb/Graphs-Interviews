@@ -82,7 +82,7 @@ function dfs(i, node, V, ordering, graph):
     return i - 1
 ```
 
-### Kahn's Algorithm for Topological Sort
+## Kahn's Algorithm for Topological Sort
 
 **Kahn's algorithm** is a simple topological sort algorithm and can find a topological sort in O(V+E) time.
 
