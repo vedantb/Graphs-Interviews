@@ -1,9 +1,3 @@
-function Edge(from, to, weight) {
-  this.from = from;
-  this.to = to;
-  this.weight = weight;
-}
-
 function topSortKahns(g) {
   let n = g.length;
   let inDegree = Array(n).fill(0);
