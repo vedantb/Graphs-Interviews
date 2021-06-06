@@ -59,3 +59,37 @@
 3. [Surrounded Regions - DFS Itreative](https://leetcode.com/problems/surrounded-regions/) - [Code](./DepthFirstSearch/DFS-From-Boundary/surrounded-regions-dfs-iterative.js)
 
 4. [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) - [Code](./DepthFirstSearch/DFS-From-Boundary/number-of-enclaves.js)
+
+#### DFS - Shortest Time
+
+**Problems:**
+
+1. [Time Needed to inform all employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/) - [Code](./DepthFirstSearch/Time-Taken-To-Reach-All-Nodes/numOfMinutesEmployees.js)
+
+#### DFS - Island Variants
+
+**Problems:**
+
+1. [Number of Islands](https://leetcode.com/problems/number-of-islands/) - [Code](./DepthFirstSearch/DFS from every unvisited node/number-of-islands.js)
+
+2. [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) - [Code](./DepthFirstSearch/DFS from every unvisited node/number-of-closed-islands.js)
+
+3. [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/) - [Code](./DepthFirstSearch/DFS from every unvisited node/keys-and-rooms.js)
+
+4. [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) - [Code](./DepthFirstSearch/DFS from every unvisited node/max-area-island.js)
+
+5. [Flood Fill](https://leetcode.com/problems/flood-fill/) - [Code](./DepthFirstSearch/DFS from every unvisited node/flood-fill.js)
+
+6. [Coloring a Border](https://leetcode.com/problems/coloring-a-border/) - [Code](./DepthFirstSearch/DFS from every unvisited node/coloring-a-border.js)
+
+#### Hash/DFS - Easy
+
+**Problems:**
+
+1. [Employee Importance](https://leetcode.com/problems/employee-importance/) - [Code](./DepthFirstSearch/HashDFS/employee-importance.js)
+
+2. [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) - [Code](./DepthFirstSearch/HashDFS/find-town-judge.js
+
+#### Cycle Find
+
+1. [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) - [Code](./DepthFirstSearch/Cycle Find/evaluate-safe-states.js)
