@@ -28,11 +28,11 @@
 
 ## Topologocal Sort
 
-[Notes and Explanation](./Notes/topologocal-sort.md)
+[Notes and Explanation](./Notes/topological-sort.md)
 
-[Topological Sort - Kahn's Algorithm](./Topological%20Sort\topsort.js)
+[Topological Sort - Kahn's Algorithm](./Topological%20Sort/topsort.js)
 
-[Topological Sort - DFS](./Topological%20Sort\topsort-dfs.js)
+[Topological Sort - DFS](./Topological%20Sort/topsort-dfs.js)
 
 **Problems:**
 
@@ -40,7 +40,7 @@
 
 ## Shortest Path
 
-[Notes - SSSP](./Nots/Shortest-Path.md)
+[Notes - SSSP](./Notes/Shortest-Path.md)
 
 [SSSP using Top Sort - DFS](./Shortest%20Path/shortestpath.js)
 
