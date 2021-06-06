@@ -37,3 +37,9 @@
 **Problems:**
 
 1. [Course Schedule 2](https://leetcode.com/problems/course-schedule-ii/) - [Code](./Topological%20Sort/course-schedule-2.js)
+
+## Shortest Path
+
+[Notes - SSSP](./Nots/Shortest-Path.md)
+
+[SSSP using Top Sort - DFS](./Shortest%20Path/shortestpath.js)
