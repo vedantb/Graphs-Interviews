@@ -96,3 +96,109 @@ function addEdges(nodeIndex):
         if !visited[edge.to]:
             pq.enqueue(edge)
 ```
+
+---
+
+## Eager Prim's
+
+The lazy operation of Prim's inserts upto E edges in the PQ. Therefore, each poll on the PQ is **O(logE)**.
+
+Instead of blindly inserting edges into a PQ which could later become stale, the eager version of Prim's tracks (node, edge) key-value pairs that can easily be updated and polled to determine the next best edge to add to the MST.
+
+**Key Realization:** for any MST with directed edges, each node is paired with exactly one of it's incoming edges (except the start node).
+This can easily be seen on a directed MST where you can have multiple edges leaving a node, but at most one entering a node.
+
+![EagerPrims](../Images/EagerPrims.png)
+
+In the eager version of Prim’s we are trying to determine which of a node’s incoming edges we should select to include in the MST.
+
+A slight difference from the lazy version is that instead of adding edges to the PQ as we iterate over the edges of node, we’re going to relax (update) the destination node’s most promising incoming edge.
+
+A natural question to ask at this point is how are we going to efficiently update and retrieve these (node, edge) pairs?
+
+One possible solution is to use an Indexed Priority Queue (IPQ) which can efficiently update and poll key-value pairs. This reduces the overall time complexity from `O(E*logE)` to `O(E*logV)` since there can only be V (node, edge) pairs in the IPQ, making the update and poll operations `O(logV)`.
+
+IPQ is a data structure which is formed when a PQ and a hash table has a baby together. It supports sorted key value pair updates and polls in log time.
+
+### Eager Prim's Algorithm
+
+Maintain a **min IPQ** of size V that sorts vertex-edge pairs (v,e) based on the main edge cost of e. By default, all vertices have a best value of (v, null) in the IPQ.
+
+Start the algorithm on any node 'S'. Mark s as visited and relax all edges of s.
+
+While the IPQ is not empty and a MST has not been formed, dequeue the next best (v,e) pair from the IPQ. Mark the node v as visited and add edge e to the MST.
+
+Next, relax all edges of v while making sure not to relax any edge pointing to a node which has already been visited.
+
+**relaxing** in this context refers to updating the entry for node v in the IPQ from (v, eold) to (v, enew) if the new edge enew from u->v has a lower cost than eold.
+
+![Eager Prims 1](../Images/EagerPrims1.png)
+![Eager Prims 2](../Images/EagerPrims2.png)
+![Eager Prims 3](../Images/EagerPrims3.png)
+![Eager Prims 4](../Images/EagerPrims4.png)
+![Eager Prims 5](../Images/EagerPrims5.png)
+
+### Eager Prim's Pseudocode
+
+```code
+// Let's define a few variables we need:
+n = … # Number of nodes in the graph.
+
+ipq = … # IPQ data structure; stores (node index, edge object)
+        # pairs. The edge objects consist of {start node, end
+        # node, edge cost} tuples. The IPQ sorts (node index,
+        # edge object) pairs based on min edge cost.
+
+g = … # Graph representing an adjacency list of weighted edges.
+      # Each undirected edge is represented as two directed
+      # edges in g. For especially dense graphs, prefer using
+      # an adjacency matrix instead of an adjacency list to
+      # improve performance.
+
+visited = [false, …, false] # visited[i] tracks whether node i
+                            # has been visited; size n
+
+# s - the index of the starting node (0 ≤ s < n)
+function eagerPrims(s = 0):
+    m = n - 1 # number of edges in MST
+    edgeCount, mstCost = 0, 0
+    mstEdges = [null, …, null] # size m
+    relaxEdgesAtNode(s)
+
+    while (!ipq.isEmpty() and edgeCount != m):
+        # Extract the next best (node index, edge object)
+        # pair from the IPQ
+        destNodeIndex, edge = ipq.dequeue()
+
+        mstEdges[edgeCount++] = edge
+        mstCost += edge.cost
+
+        relaxEdgesAtNode(destNodeIndex)
+
+    if edgeCount != m:
+        return (null, null) # No MST exists!
+
+    return (mstCost, mstEdges)
+
+function relaxEdgesAtNode(currentNodeIndex):
+    # Mark the current node as visited.
+    visited[currentNodeIndex] = true
+
+    # Get all the edges going outwards from the current node.
+    edges = g[currentNodeIndex]
+
+    for (edge : edges):
+        destNodeIndex = edge.to
+
+        # Skip edges pointing to already visited nodes.
+        if visited[destNodeIndex]:
+            continue
+
+        if !ipq.contains(destNodeIndex):
+            # Insert edge for the first time.
+            ipq.insert(destNodeIndex, edge)
+        else:
+            # Try and improve the cheapest edge at destNodeIndex with
+            # the current edge in the IPQ.
+            ipq.decreaseKey(destNodeIndex, edge)
+```
