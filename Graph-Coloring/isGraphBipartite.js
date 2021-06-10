@@ -2,7 +2,7 @@
 
 /**
  * We start with a colors array where each node starts with the color -1.
- * We pick the start node, give it color 0 and push it to the stack to start DFS
+ * We pick the start node, give it color 0 and push it to the stack to start BFS
  * Pop a node from the stack
  * Get all neighbors of the popped node. if its uncolored(-1), push it to the stack and give it a color opposite of the popped node.
  * If the color of the neighbor is same as the color of the popped node return false as graph cannot be bipartite.
