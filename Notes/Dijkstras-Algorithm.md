@@ -19,6 +19,20 @@ Insert (s, 0) into the PQ and loop while PQ is not empty pulling out the next mo
 
 Iterate over all edges outwards from the current node and relax each edge appending a new (nodeIndex, distance) key-value pair to the PQ for every relaxation.
 
+![Dikstra Lazy 1](../Images/dijkstra1.png)
+
+![Dikstra Lazy 2](../Images/dijkstra2.png)
+
+![Dikstra Lazy 3](../Images/dijkstra3.png)
+
+![Dikstra Lazy 4](../Images/dijkstra4.png)
+
+![Dikstra Lazy 5](../Images/dijkstra5.png)
+
+![Dikstra Lazy 6](../Images/dijkstra6.png)
+
+![Dikstra Lazy 7](../Images/dijkstra7.png)
+
 **Pseudocode:**
 
 ```code
@@ -175,3 +189,13 @@ function dikjstra(g, n, s, e):
 Our current lazy implementation inserts duplicate key value pairs in our PQ because it's more efficient to insert a new key-value pair in O(logn) than it is to update an existing key's value in O(n).
 
 This approach is inefficient for dense graphs because we end up with several stale outdated key value pairs in our PQ. The eager version of Dijkstra's avoids duplicate key value pairs and supports efficient value updates in O(logn) by using an Indexed Priority Queue.
+
+## D-ary Heap Optimization
+
+When executing Dijkstras algorithm on dense graphs, there are a lot more updates (decreaseKey operations) to key-value pairs than there are dequeue operations.
+
+A D-ary heap is a heap variant in which each node has D children. This speeds up the decreaseKey operation at the expense of more costly removals.
+
+Q; What is the optimal D-ary heap degree to maximize performance of Dijkstras algorithm?
+
+In general **D = E/V** is the best degree to use to balance removals against decreaseKey operations improving Dijkstra's time complexity to O(E\*log(V)) where the log is of base E/V which is much better especially for dense graphs which has lots of decreaseKey operations.

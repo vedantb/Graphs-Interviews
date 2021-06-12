@@ -72,11 +72,11 @@ class MinHeap {
   removeMinNode() {
     let size = this.allNodes.length - 1;
     // creating a new node with the minimum element which will eventually bre returned
-    let minNode = new Node(this.allNodes[0].data, this.allNodes[0].weight);
+    let minNode = new Node(this.allNodes[0].weight, this.allNodes[0].data);
     // updating the node at the top with the last nodes weight and data
     let lastNodeWeight = this.allNodes[size].weight;
     this.allNodes[0].weight = lastNodeWeight;
-    this.allNodes[0].data - this.allNodes[size].data;
+    this.allNodes[0].data = this.allNodes[size].data;
 
     // update the nodePosition map to indicate the last node is now at position 0 and the minnode no longer exists
     delete this.nodePosition[minNode.data];
