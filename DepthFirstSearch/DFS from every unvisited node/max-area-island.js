@@ -1,4 +1,4 @@
-// leetcode.com/problems/max-area-of-island/
+// https://leetcode.com/problems/max-area-of-island/
 
 /**
  * Same problem as number of islands. Instead of always returning 1 for every island found
@@ -10,7 +10,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-https: var maxAreaOfIsland = function (grid) {
+var maxAreaOfIsland = function (grid) {
   if (!grid || grid.length === 0) return 0;
   let maxArea = 0;
   for (let i = 0; i < grid.length; i++) {

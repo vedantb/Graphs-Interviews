@@ -1,4 +1,4 @@
-//leetcode.com/problems/coloring-a-border/
+// https://leetcode.com/problems/coloring-a-border/
 
 // !!!! Come back to this problem
 
@@ -18,7 +18,7 @@
  * @param {number} color
  * @return {number[][]}
  */
-https: var colorBorder = function (grid, r0, c0, color) {
+var colorBorder = function (grid, r0, c0, color) {
   if (!grid || grid.length === 0) return grid;
   let oldColor = grid[r0][c0];
 

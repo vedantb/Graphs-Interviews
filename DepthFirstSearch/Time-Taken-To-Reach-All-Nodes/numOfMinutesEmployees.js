@@ -1,4 +1,4 @@
-// leetcode.com/problems/time-needed-to-inform-all-employees/
+// https://leetcode.com/problems/time-needed-to-inform-all-employees/
 /**
  * @param {number} n
  * @param {number} headID
@@ -6,7 +6,7 @@
  * @param {number[]} informTime
  * @return {number}
  */
-https: var numOfMinutes = function (n, headId, manager, informTime) {
+var numOfMinutes = function (n, headId, manager, informTime) {
   let managerGraph = {};
   for (let i = 0; i < manager.length; i++) {
     let currentManager = manager[i];
