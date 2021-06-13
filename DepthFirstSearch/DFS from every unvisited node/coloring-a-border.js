@@ -1,4 +1,4 @@
-//leetcode.com/problems/coloring-a-border/
+// https://leetcode.com/problems/coloring-a-border/
 
 // !!!! Come back to this problem
 
@@ -18,55 +18,55 @@
  * @param {number} color
  * @return {number[][]}
  */
-https: var colorBorder = function (grid, r0, c0, color) {
-  if (!grid || grid.length === 0) return grid;
-  let oldColor = grid[r0][c0];
+var colorBorder = function (grid, r0, c0, color) {
+    if (!grid || grid.length === 0) return grid;
+    let oldColor = grid[r0][c0];
 
-  dfs(grid, r0, c0, oldColor);
-  console.log(grid);
-  for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[0].length; j++) {
-      if (grid[i][j] < 0) grid[i][j] = color;
+    dfs(grid, r0, c0, oldColor);
+    console.log(grid);
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[0].length; j++) {
+            if (grid[i][j] < 0) grid[i][j] = color;
+        }
     }
-  }
-  return grid;
+    return grid;
 };
 
 var dfs = function (grid, r, c, oldColor) {
-  // Out of bounds check
-  if (r < 0 || c < 0 || r >= grid.length || c >= grid[0].length || grid[r][c] !== oldColor) return;
+    // Out of bounds check
+    if (r < 0 || c < 0 || r >= grid.length || c >= grid[0].length || grid[r][c] !== oldColor) return;
 
-  grid[r][c] = -oldColor;
+    grid[r][c] = -oldColor;
 
-  dfs(grid, r + 1, c, oldColor);
-  dfs(grid, r - 1, c, oldColor);
-  dfs(grid, r, c + 1, oldColor);
-  dfs(grid, r, c - 1, oldColor);
-  if (
-    r > 0 &&
-    c > 0 &&
-    r < grid.length - 1 &&
-    c < grid[0].length - 1 &&
-    oldColor === Math.abs(grid[r + 1][c]) &&
-    oldColor === Math.abs(grid[r - 1][c]) &&
-    oldColor === Math.abs(grid[r][c + 1]) &&
-    oldColor === Math.abs(grid[r][c - 1])
-  ) {
-    grid[r][c] = oldColor;
-  }
+    dfs(grid, r + 1, c, oldColor);
+    dfs(grid, r - 1, c, oldColor);
+    dfs(grid, r, c + 1, oldColor);
+    dfs(grid, r, c - 1, oldColor);
+    if (
+        r > 0 &&
+        c > 0 &&
+        r < grid.length - 1 &&
+        c < grid[0].length - 1 &&
+        oldColor === Math.abs(grid[r + 1][c]) &&
+        oldColor === Math.abs(grid[r - 1][c]) &&
+        oldColor === Math.abs(grid[r][c + 1]) &&
+        oldColor === Math.abs(grid[r][c - 1])
+    ) {
+        grid[r][c] = oldColor;
+    }
 };
 
 console.log(
-  colorBorder(
-    [
-      [2, 1, 3, 2, 1, 1, 2],
-      [1, 2, 3, 1, 2, 1, 2],
-      [1, 2, 1, 2, 2, 2, 2],
-      [2, 1, 2, 2, 2, 2, 2],
-      [2, 3, 3, 3, 2, 1, 2]
-    ],
-    4,
-    4,
-    3
-  )
+    colorBorder(
+        [
+            [2, 1, 3, 2, 1, 1, 2],
+            [1, 2, 3, 1, 2, 1, 2],
+            [1, 2, 1, 2, 2, 2, 2],
+            [2, 1, 2, 2, 2, 2, 2],
+            [2, 3, 3, 3, 2, 1, 2]
+        ],
+        4,
+        4,
+        3
+    )
 );
