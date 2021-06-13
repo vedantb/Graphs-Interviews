@@ -1,3 +1,5 @@
+// Resource: https://www.youtube.com/watch?v=jGRRBJlNtwI
+
 function isHamiltonianCycle(graph) {
   let path = [];
   let visited = Array(graph.length).fill(false);
