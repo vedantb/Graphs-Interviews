@@ -1,4 +1,4 @@
-//leetcode.com/problems/shortest-path-in-binary-matrix/
+// https://leetcode.com/problems/shortest-path-in-binary-matrix/
 
 // Standard BFS. Should know that this problem is also solvable by A*
 
@@ -6,7 +6,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-https: var shortestPathBinaryMatrix = function (grid) {
+var shortestPathBinaryMatrix = function (grid) {
   if (
     !grid ||
     grid.length === 0 ||

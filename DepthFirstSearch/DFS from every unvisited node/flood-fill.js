@@ -1,4 +1,4 @@
-// leetcode.com/problems/flood-fill/
+// https://leetcode.com/problems/flood-fill/
 /**
  * @param {number[][]} image
  * @param {number} sr
@@ -6,7 +6,7 @@
  * @param {number} newColor
  * @return {number[][]}
  */
-https: var floodFill = function (image, sr, sc, newColor) {
+var floodFill = function (image, sr, sc, newColor) {
   let currentColor = image[sr][sc];
   if (currentColor !== newColor) dfs(image, sr, sc, image[sr][sc], newColor);
   return image;
