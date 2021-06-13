@@ -3,7 +3,7 @@ let maxFlow = function (capacity, source, sink) {
     .fill(0)
     .map(() => Array(capacity[0].length).fill(0));
 
-  // Residual capacitu initially same as capacity as there is no flow
+  // Residual capacity initially same as capacity as there is no flow
   for (let i = 0; i < capacity.length; i++) {
     for (let j = 0; j < capacity[0].length; j++) {
       residualCapacity[i][j] = capacity[i][j];

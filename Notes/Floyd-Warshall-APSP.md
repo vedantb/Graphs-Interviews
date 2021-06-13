@@ -4,7 +4,7 @@ In graph, theory the Floyd-Warshall (FW) algorithm is an APSP algorithm. This me
 
 The time complexity of FW is O(V^3) which is ideal for graphs no larger than a couple of hundred nodes.
 
-![Algo Reference](../Images\ShortestPathAlgoReference.png)
+![Algo Reference](../Images/ShortestPathAlgoReference.png)
 
 **Graph Setup:**
 
@@ -12,7 +12,7 @@ With FW, the optimal way to represent our graph is with a 2D adjacency matrix m 
 
 **Note:** It is assumed that the distance from a node to itself is 0. If there is no edge from i to j, then set the edge value m[i][j] to be positive infinity.
 
-![FW Graph Setup](../Images\FW-GraphSetup.png)
+![FW Graph Setup](../Images/FW-GraphSetup.png)
 
 The main idea behind FW is to gradually **build up all itermediate routes between nodes i and j** to find the optimal path.
 
@@ -22,7 +22,7 @@ Suppose there exists a third node, c. If `m[a][c] + m[c][b] < m[a][b]` then itâ€
 
 The goal of FW is to eventually consider going through all possible intermediate nodes on paths of different lengths
 
-![FW Idea](../Images\FW-Idea.png)
+![FW Idea](../Images/FW-Idea.png)
 
 ## The Memo Table
 
