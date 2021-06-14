@@ -60,7 +60,24 @@ function minCost(distance) {
     }
   }
   parent.set(new Index(0, set).id, prevVertex);
+  printTour(parent, distance.length);
   return min;
+}
+
+function printTour(parent, totalVertices) {
+  let set = new Set();
+  for (let i = 0; i < totalVertices; i++) {
+    set.add(i);
+  }
+  let start = 0;
+  let stack = [];
+  while (true) {
+    stack.push(start);
+    set.delete(start);
+    start = parent.get(new Index(start, set).id);
+    if (start === undefined || start === null) break;
+  }
+  console.log(stack.join("->"));
 }
 
 function getCost(set, prevVertex, minCostDP) {
