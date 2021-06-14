@@ -1,3 +1,6 @@
+// Prim's Minimum Spanning Tree
+// Notes and https://www.youtube.com/watch?v=oP2-8ysT3QQ&t=4s
+
 let MinHeap = require("../Heaps/binaryMinHeap");
 
 function Edge(from, to, cost) {

@@ -65,6 +65,13 @@ m[6][5] = 11;
 m[4][5] = 1;
 m[5][4] = -2;
 
+m = [
+  [0, 1, Infinity, 1],
+  [Infinity, 0, 1, Infinity],
+  [Infinity, Infinity, 0, 1],
+  [Infinity, Infinity, Infinity, 0]
+];
+
 let { dp, path } = floydwarshall(m);
 console.log(dp);
 console.log(path);
