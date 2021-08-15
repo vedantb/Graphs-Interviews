@@ -19,19 +19,19 @@ Insert (s, 0) into the PQ and loop while PQ is not empty pulling out the next mo
 
 Iterate over all edges outwards from the current node and relax each edge appending a new (nodeIndex, distance) key-value pair to the PQ for every relaxation.
 
-![Dikstra Lazy 1](../Images/dijkstra1.png)
+![Dikstra Lazy 1](../Images/Dijkstra1.png)
 
-![Dikstra Lazy 2](../Images/dijkstra2.png)
+![Dikstra Lazy 2](../Images/Dijkstra2.png)
 
-![Dikstra Lazy 3](../Images/dijkstra3.png)
+![Dikstra Lazy 3](../Images/Dijkstra3.png)
 
-![Dikstra Lazy 4](../Images/dijkstra4.png)
+![Dikstra Lazy 4](../Images/Dijkstra4.png)
 
-![Dikstra Lazy 5](../Images/dijkstra5.png)
+![Dikstra Lazy 5](../Images/Dijkstra5.png)
 
-![Dikstra Lazy 6](../Images/dijkstra6.png)
+![Dikstra Lazy 6](../Images/Dijkstra6.png)
 
-![Dikstra Lazy 7](../Images/dijkstra7.png)
+![Dikstra Lazy 7](../Images/Dijkstra7.png)
 
 **Pseudocode:**
 
