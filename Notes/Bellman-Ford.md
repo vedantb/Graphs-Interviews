@@ -8,7 +8,7 @@ However, Djikstra's algorithm can fail when the graph has negative edge weights.
 
 Finding negative cycles can be useful in many types of applications. One particularly neat application arises in finance when performing an **arbitrage** between two or more markets.
 
-![Negative Cycle](../Images\BF-NegativeCycles1.png)
+![Negative Cycle](../Images/BF-NegativeCycles1.png)
 
 The yellow nodes are the nodes reachable by 1 i.e can be reached by a negative cycle.
 
@@ -52,8 +52,8 @@ At the end of all iterations:
 
 We run the algorithm again to detect negative cycles:
 
-![BF Negative Cycles](../Images\BFNegativeCycle.png)
+![BF Negative Cycles](../Images/BFNegativeCycle.png)
 
 ## Code
 
-[Bellman Ford With Edge List](../Bellman-Ford\bellmanFord.js)
+[Bellman Ford With Edge List](../Bellman-Ford/bellmanFord.js)
